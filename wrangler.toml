@@ -1,11 +1,11 @@
-name = "granite-state-railfan"
+name = "royal-mud-57c1"
 type = "javascript"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
 # Cloudflare Pages build configuration
 [env.production]
-name = "granite-state-railfan"
+name = "royal-mud-57c1"
 routes = [
   { pattern = "granite-state-railfan.pages.dev", zone_name = "pages.dev" }
 ]
