@@ -52,7 +52,7 @@
       text-align: center;
       background:
         linear-gradient(rgba(18, 24, 15, 0.72), rgba(18, 24, 15, 0.72)),
-        url('./assets/images/banner-x2.png') center/cover no-repeat;
+        url('./assets/images/banner-no-image.png') center/cover no-repeat;
       padding: 2rem;
     }
 
@@ -180,13 +180,19 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: stretch;
       gap: 1.5rem;
       margin-top: 2rem;
     }
 
     .social-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 1 220px;
+      max-width: 300px;
       min-width: 220px;
-      padding: 1.2rem;
+      padding: 1.4rem;
       border-radius: 18px;
       text-align: center;
       background-color: var(--card-bg);
@@ -201,7 +207,12 @@
     }
 
     .social-link h3 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .social-link p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
     }
 
     footer {
@@ -238,7 +249,7 @@
 <body>
   <header class="hero">
     <div class="hero-content">
-      <img src="./assets/images/Logo X2 .png" alt="Granite State Railfan Logo" class="logo" />
+      <img src="./assets/images/Logo-x2.png" alt="Granite State Railfan Logo" class="logo" />
 
       <h1>Granite State Railfan</h1>
 
@@ -247,42 +258,6 @@
         and railfan adventures across the Granite State.
       </p>
 
-      <div class="button-group">
-        <a
-          class="btn"
-          href="https://www.youtube.com/@granitestaterailfan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube
-        </a>
-
-        <a
-          class="btn"
-          href="https://www.instagram.com/granitestaterailfan/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-
-        <a
-          class="btn"
-          href="https://www.facebook.com/profile.php?id=61589875160674"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook
-        </a>
-        <a
-          class="btn"
-          href="https://www.tiktok.com/@granitestaterailfan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TikTok
-        </a>
-      </div>
     </div>
   </header>
 
@@ -371,7 +346,7 @@
             rel="noopener noreferrer"
           >
             <h3>tiktok</h3>
-            <p>Connect with the Granite State Railfan community.</p>
+            <p>Watch short-form railfan clips and behind-the-scenes content.</p>
           </a>
         </div>
       </div>
