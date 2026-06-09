@@ -1,33 +1,13 @@
-name = "royal-mud-57c1"
-type = "javascript"
-main = "src/index.js"
+# Granite State Railfan - Cloudflare Pages Static Site Configuration
+name = "granite-state-railfan"
 compatibility_date = "2024-01-01"
 
-# Cloudflare Pages build configuration
-[env.production]
-name = "royal-mud-57c1"
-routes = [
-  { pattern = "granite-state-railfan.pages.dev", zone_name = "pages.dev" }
-]
-
-# Static site configuration
+# Build configuration
 [build]
-command = "echo 'Static site - no build required'"
+command = "echo 'Static site ready'"
 cwd = "./"
-watch_paths = []
 
 # Environment variables
-[env.production.vars]
-SITE_NAME = "Granite State Railfan"
-SITE_DESCRIPTION = "Railfanning photography, videos, and New Hampshire railroad content"
-
-# Asset serving
-[[rules]]
-type = "CompiledContentType"
-globs = ["**/*.wasm"]
-fallthrough = true
-
-[[rules]]
-type = "Text"
-globs = ["**/*.html", "**/*.txt", "**/*.xml", "**/*.json"]
-fallthrough = false
+[env.production]
+name = "granite-state-railfan"
+vars = { SITE_NAME = "Granite State Railfan", SITE_DESCRIPTION = "Railfanning photography, videos, and New Hampshire railroad content" }
