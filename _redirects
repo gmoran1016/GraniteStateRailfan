@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects and routing
+# Redirect root to index
+/ /index.html 200
+
+# Cache static assets long-term
+/assets/* /assets/:splat 200
+
+# SPA fallback - if file not found, serve index.html
+/* /index.html 200
