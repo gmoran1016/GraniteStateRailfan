@@ -1,8 +1,7 @@
 # Granite State Railfan - Cloudflare Pages Static Site
 name = "granite-state-railfan"
-type = "javascript"
 compatibility_date = "2024-01-01"
 
-# Cloudflare Pages configuration
+# Static files configuration
 [site]
 bucket = "."
