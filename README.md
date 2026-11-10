@@ -2,7 +2,7 @@
 
 A railfanning website dedicated to New Hampshire and New England railroad content - photography, videography, and railfan adventures.
 
-**Live Site:** [granite-state-railfan.pages.dev](https://granite-state-railfan.pages.dev)  
+**Live Site:** [granitestaterailfan.com](https://www.granitestaterailfan.com)<br>
 **Content Creator:** Griffin  
 **Last Updated:** November 2026
 
@@ -10,9 +10,9 @@ A railfanning website dedicated to New Hampshire and New England railroad conten
 
 ```
 ├── index.html              # Main website (homepage)
-├── _redirects              # Cloudflare Pages routing configuration
-├── _headers                # Cloudflare Pages cache and security headers
-├── wrangler.toml           # Cloudflare Pages deployment config
+├── _redirects              # Cloudflare Workers static asset redirects
+├── _headers                # Cloudflare Workers static asset headers
+├── wrangler.toml           # Cloudflare Workers static assets config
 ├── README.md               # This file
 ├── assets/
 │   ├── images/             # All image assets (logos, banners, photos)
@@ -44,26 +44,26 @@ A railfanning website dedicated to New Hampshire and New England railroad conten
 
 ## Deployment
 
-### Cloudflare Pages
+### Cloudflare Workers Builds
 
-This site is optimized for Cloudflare Pages deployment:
+This static site is deployed as a Cloudflare Worker with static assets:
 
-1. **Auto-deployed** from git repository
-2. **Configured via `wrangler.toml`** for build settings
-3. **Routing handled** by `_redirects` file
-4. **Cache & security** configured via `_headers` file
+1. **Auto-deployed** from the connected Git repository's `main` branch
+2. **Configured via `wrangler.toml`** with `assets.directory = "."`
+3. **Deployed with** `npx wrangler deploy`
+4. **Routing and headers** handled by `_redirects` and `_headers`
 
 #### Deployment Steps:
 
-1. Connect your repository to Cloudflare Pages
-2. Set build command: `echo "Static site ready"`
-3. Set publish directory: `.` (root)
-4. Deploy!
+1. Connect the repository to Cloudflare Workers Builds
+2. Set the production branch to `main` and the root directory to `/`
+3. Leave the build command empty for this static site
+4. Set the deploy command to `npx wrangler deploy`
 
 #### Environment
 
 - Build: Static files only (no build process needed)
-- Runtime: Cloudflare Pages (edge deployment)
+- Runtime: Cloudflare Workers static assets
 - Assets: Cached for performance
 
 ## Local Development
@@ -100,8 +100,8 @@ npx http-server
 - **HTML5** - Semantic markup
 - **CSS3** - Responsive design with CSS Variables and Grid/Flexbox
 - **Custom Fonts** - MECold TrueType font for branding
-- **Cloudflare Pages** - Edge hosting and deployment
-- **Wrangler** - Cloudflare Pages CLI tooling
+- **Cloudflare Workers** - Edge hosting for static assets
+- **Wrangler** - Cloudflare Workers deployment tooling
 
 ## Getting Started
 

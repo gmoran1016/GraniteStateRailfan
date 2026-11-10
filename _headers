@@ -1,4 +1,4 @@
-# Global headers for Cloudflare Pages
+# Global headers for Cloudflare Workers static assets
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN

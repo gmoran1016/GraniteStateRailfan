@@ -1,4 +1,4 @@
-# Cloudflare Pages redirects and routing
+# Cloudflare Workers static asset redirects and routing
 # Redirect root to index
 / /index.html 200
 

@@ -1,0 +1,7 @@
+/.assetsignore
+/.gitattributes
+/.gitignore
+/README.md
+/wrangler.toml
+/docs/
+/*.zip
