@@ -6,7 +6,7 @@
   <title>Granite State Railfan</title>
   <meta
     name="description"
-    content="Granite State Railfan - Railfanning photography, videos, and New Hampshire railroad content."
+    content="New Hampshire and New England railroad photography, train videos, and railfan adventures from Granite State Railfan."
   />
 
   <style>
@@ -120,6 +120,15 @@
       transform: translateY(-3px);
     }
 
+    .btn:focus-visible,
+    .featured-video-link:focus-visible,
+    .video-tile a:focus-visible,
+    .instagram-link:focus-visible,
+    .social-link:focus-visible {
+      outline: 3px solid var(--text-light);
+      outline-offset: 4px;
+    }
+
     section {
       padding: 5rem 1.5rem;
     }
@@ -215,6 +224,119 @@
       color: rgba(255, 255, 255, 0.92);
     }
 
+    .latest-video {
+      background-color: #35492d;
+    }
+
+    .featured-video {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.9fr);
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background-color: var(--card-bg);
+    }
+
+    .featured-video-link {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      background-color: #1c2719;
+    }
+
+    .featured-video-link img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .featured-video-link:hover img {
+      transform: scale(1.03);
+    }
+
+    .play-label {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      background-color: var(--accent);
+      color: #111111;
+      font-weight: bold;
+    }
+
+    .featured-video-copy {
+      padding: 2rem;
+    }
+
+    .featured-video-copy h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .featured-video-copy p {
+      margin-bottom: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .video-date {
+      font-size: 0.95rem;
+    }
+
+    .instagram-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--text-light);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 0.25em;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .more-videos-title {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 1.35rem;
+    }
+
+    .video-tile {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background-color: var(--card-bg);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .video-tile:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .video-tile a {
+      display: block;
+    }
+
+    .video-tile img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .video-tile h3 {
+      padding: 1rem;
+      font-size: 1.05rem;
+      color: var(--text-light);
+      letter-spacing: 0;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -243,20 +365,32 @@
       .logo {
         width: 140px;
       }
+
+      .featured-video {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-video-copy {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero-content">
-      <img src="./assets/images/Logo-x2.png" alt="Granite State Railfan Logo" class="logo" />
+      <img src="./assets/images/logo-x2.png" alt="Granite State Railfan Logo" class="logo" />
 
       <h1>Granite State Railfan</h1>
 
       <p>
-        Exploring New Hampshire railroads through photography, videography,
-        and railfan adventures across the Granite State.
+        Railroad photography and videos from New Hampshire and across New England.
       </p>
+
+      <div class="button-group">
+        <a class="btn" href="https://www.youtube.com/watch?v=eA0q_PCMTss" target="_blank" rel="noopener noreferrer">Watch the latest video</a>
+        <a class="btn" href="https://www.instagram.com/granitestaterailfan/" target="_blank" rel="noopener noreferrer">See railfan photos</a>
+      </div>
 
     </div>
   </header>
@@ -300,6 +434,58 @@
       </div>
     </section>
 
+    <section class="latest-video" id="latest-video">
+      <div class="container">
+        <h2 class="section-title">Latest video</h2>
+        <p class="section-description">
+          Come along for the 470 Club Excursion on the Conway Scenic Railroad.
+        </p>
+
+        <article class="featured-video">
+          <a
+            class="featured-video-link"
+            href="https://www.youtube.com/watch?v=eA0q_PCMTss"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch 470 Club Excursion Run Bys at The Conway Scenic Railroad on YouTube"
+          >
+            <img
+              src="https://i.ytimg.com/vi/eA0q_PCMTss/hqdefault.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <span class="play-label">Watch on YouTube</span>
+          </a>
+          <div class="featured-video-copy">
+            <h3>470 Club Excursion Run Bys at The Conway Scenic Railroad</h3>
+            <p class="video-date">November 7, 2026 · Crawford Notch, New Hampshire</p>
+            <p>Photo run-bys from a day aboard the Conway Scenic Railroad’s annual 470 Club Excursion.</p>
+            <a class="btn" href="https://www.youtube.com/watch?v=eA0q_PCMTss" target="_blank" rel="noopener noreferrer">Watch the video</a>
+          </div>
+        </article>
+
+        <h3 class="more-videos-title">More from the channel</h3>
+        <div class="video-grid">
+          <article class="video-tile">
+            <a href="https://www.youtube.com/watch?v=761RKp6R0wI" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.ytimg.com/vi/761RKp6R0wI/hqdefault.jpg" alt="" loading="lazy" />
+              <h3>Portsmouth Local L063 · June 19, 2026</h3>
+            </a>
+          </article>
+          <article class="video-tile">
+            <a href="https://www.youtube.com/watch?v=DaH9JihKBfQ" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.ytimg.com/vi/DaH9JihKBfQ/hqdefault.jpg" alt="" loading="lazy" />
+              <h3>A Weird Amtrak Consist and NHN Gravel Train in Dover</h3>
+            </a>
+          </article>
+        </div>
+
+        <p class="section-description">
+          <a class="instagram-link" href="https://www.instagram.com/granitestaterailfan/" target="_blank" rel="noopener noreferrer">Browse more railfan photography on Instagram</a>
+        </p>
+      </div>
+    </section>
+
     <section class="socials">
       <div class="container">
         <h2 class="section-title">Follow Along</h2>
@@ -332,7 +518,7 @@
 
           <a
             class="social-link"
-            href="https://www.facebook.com/profile.php?id=61589875160674"
+            href="https://www.facebook.com/granitestaterailfan/"
             target="_blank"
             rel="noopener noreferrer"
           >

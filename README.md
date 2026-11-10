@@ -4,7 +4,7 @@ A railfanning website dedicated to New Hampshire and New England railroad conten
 
 **Live Site:** [granite-state-railfan.pages.dev](https://granite-state-railfan.pages.dev)  
 **Content Creator:** Griffin  
-**Last Updated:** June 2026
+**Last Updated:** November 2026
 
 ## Project Structure
 
@@ -39,7 +39,8 @@ A railfanning website dedicated to New Hampshire and New England railroad conten
 
 - [YouTube](https://www.youtube.com/@granitestaterailfan)
 - [Instagram](https://www.instagram.com/granitestaterailfan/)
-- [Facebook](https://www.facebook.com/profile.php?id=61589875160674)
+- [Facebook](https://www.facebook.com/granitestaterailfan/)
+- [TikTok](https://www.tiktok.com/@granitestaterailfan)
 
 ## Deployment
 
@@ -143,7 +144,8 @@ This project is the intellectual property of Granite State Railfan. Use and modi
 
 - **YouTube:** [@granitestaterailfan](https://www.youtube.com/@granitestaterailfan)
 - **Instagram:** [@granitestaterailfan](https://www.instagram.com/granitestaterailfan/)
-- **Facebook:** [Granite State Railfan](https://www.facebook.com/profile.php?id=61589875160674)
+- **Facebook:** [Granite State Railfan](https://www.facebook.com/granitestaterailfan/)
+- **TikTok:** [@granitestaterailfan](https://www.tiktok.com/@granitestaterailfan)
 
 ---
 
