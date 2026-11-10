@@ -1,9 +1,2 @@
-# Cloudflare Workers static asset redirects and routing
-# Redirect root to index
-/ /index.html 200
-
-# Cache static assets long-term
-/assets/* /assets/:splat 200
-
-# SPA fallback - if file not found, serve index.html
-/* /index.html 200
+# Cloudflare Workers static asset redirects.
+# No custom redirects are required; the SPA fallback is configured in wrangler.toml.

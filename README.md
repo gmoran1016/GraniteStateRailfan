@@ -11,7 +11,7 @@ A railfanning website dedicated to New Hampshire and New England railroad conten
 ```
 ├── .assetsignore           # Files excluded from public static asset uploads
 ├── index.html              # Main website (homepage)
-├── _redirects              # Cloudflare Workers static asset redirects
+├── _redirects              # Optional Cloudflare Workers static asset redirects
 ├── _headers                # Cloudflare Workers static asset headers
 ├── wrangler.toml           # Cloudflare Workers static assets config
 ├── README.md               # This file
@@ -52,7 +52,7 @@ This static site is deployed as a Cloudflare Worker with static assets:
 1. **Auto-deployed** from the connected Git repository's `main` branch
 2. **Configured via `wrangler.toml`** with `assets.directory = "."`
 3. **Deployed with** `npx wrangler deploy`
-4. **Routing and headers** handled by `_redirects` and `_headers`
+4. **SPA fallback** configured in `wrangler.toml`; response headers use `_headers`
 
 #### Deployment Steps:
 
@@ -87,7 +87,7 @@ npx http-server
 - **assets/images/** - All PNG, JPG, and image files
 - **assets/fonts/** - TTF and web font files
 - **docs/** - Additional documentation, PDFs, and resources
-- **_redirects** - URL routing and SPA fallback for Cloudflare
+- **_redirects** - Optional custom redirects for Cloudflare Workers
 - **_headers** - Cache control and security headers
 
 ## Browser Support
