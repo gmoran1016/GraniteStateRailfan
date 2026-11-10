@@ -9,6 +9,7 @@ A railfanning website dedicated to New Hampshire and New England railroad conten
 ## Project Structure
 
 ```
+├── .assetsignore           # Files excluded from public static asset uploads
 ├── index.html              # Main website (homepage)
 ├── _redirects              # Cloudflare Workers static asset redirects
 ├── _headers                # Cloudflare Workers static asset headers
